@@ -1,8 +1,8 @@
 {
-  "name": "nyc-elections-ui",
+  "name": "civic-coup-ui",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com",
+  "homepage": "https://civic-coup.github.io/civic-coup-ui",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
