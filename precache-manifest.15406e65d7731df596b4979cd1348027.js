@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0636672e62c6496364db7400b9581e0f",
+    "revision": "88acc154fa3b578364c4c6c980fbb56e",
     "url": "/civic-coup-ui/index.html"
   },
   {
