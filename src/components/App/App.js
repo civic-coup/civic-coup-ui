@@ -31,31 +31,23 @@ function App() {
                   <h2 className="text-uppercase lined">Cause</h2>
                 </header>
                 <p className="lead">
-                  This can be an about section or anything else ;)
+                  What can we do, for long impactful change?
                 </p>
-                <p>
-                  Impossible considered invitation him men instrument saw
-                  celebrated unpleasant. Put rest and must set kind next many
-                  near nay. He exquisite continued explained middleton am. Voice
-                  hours young woody has she think equal. Estate moment he at on
-                  wonder at season little. Six garden result summer set family
-                  esteem nay estate. End admiration mrs unreserved discovered
-                  comparison especially invitation.
-                </p>
-                <p>
-                  Delightful unreserved impossible few estimating men favourable
-                  see entreaties. She propriety immediate was improving. He or
-                  entrance humoured likewise moderate. Much nor game son say
-                  feel. Fat make met can must form into gate. Me we offending
-                  prevailed discovery.
-                </p>
+                <p>small summary for why?...</p>
+                <p>summary on how to go about it with the site...</p>
               </div>
               <div className="col-lg-6">
-                <img
-                  src={pictureOne}
-                  alt="..."
-                  className="img-fluid rounded-circle d-block mx-auto"
-                />
+                <a
+                  style={{ display: "table-cell" }}
+                  href="https://www.instagram.com/thegeniuslucas/"
+                  target="popup"
+                >
+                  <img
+                    src={pictureOne}
+                    alt="..."
+                    className="img-fluid rounded-circle d-block mx-auto"
+                  />
+                </a>
               </div>
             </div>
           </div>
@@ -87,19 +79,8 @@ function App() {
             </header>
             <div className="row">
               <p>
-                Effects present letters inquiry no an removed or friends. Desire
-                behind latter me though in. Supposing shameless am he engrossed
-                up additions. My possible peculiar together to. Desire so better
-                am cannot he up before points. Remember mistaken opinions it
-                pleasure of debating. Court front maids forty if aware their at.
-                Chicken use are pressed removed.
-              </p>
-              <p>
-                Able an hope of body. Any nay shyness article matters own
-                removal nothing his forming. Gay own additions education
-                satisfied the perpetual. If he cause manor happy. Without
-                farther she exposed saw man led. Along on happy could cease
-                green oh.
+                Please help us improve, if you see any issues, shoot us an email
+                @ some-email@some.com.
               </p>
               <ul className="mb-0 list-inline text-center">
                 <li className="list-inline-item">
