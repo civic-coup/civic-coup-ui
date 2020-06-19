@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "289aaa9e397d62153ed35e4c6ee36cd1",
+    "revision": "5cca918d9ea05cb51ed4b689bf526c04",
     "url": "/civic-coup-ui/index.html"
   },
   {
-    "revision": "d8861883db3072c9d8a2",
+    "revision": "76982f734400acb4dda8",
     "url": "/civic-coup-ui/static/css/main.315854b3.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/civic-coup-ui/static/js/2.ca7dd06d.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "d8861883db3072c9d8a2",
-    "url": "/civic-coup-ui/static/js/main.21349b70.chunk.js"
+    "revision": "76982f734400acb4dda8",
+    "url": "/civic-coup-ui/static/js/main.c6a6e639.chunk.js"
   },
   {
     "revision": "495b22224e85891cfec9",
