@@ -49,8 +49,8 @@ function CandidateListing({ address }) {
   }, []);
 
   useEffect(() => {
-    async function fetchElectionCandidates() {
-      await window.gapi.client.civicinfo.representatives
+    function fetchElectionCandidates() {
+      window.gapi.client.civicinfo.representatives
         .representativeInfoByAddress({ address })
         .then((response) => {
           const { result } = response;
