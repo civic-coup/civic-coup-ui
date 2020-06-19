@@ -86,12 +86,12 @@ function CandidateListing({ address }) {
           <p>{address}</p>
         </div>
       )}
-      {stateSenatorCandidates.length > 0 && (
+      {usRepCandidates.length > 0 && (
         <div>
           <hr />
-          <p>State Senators:</p>
+          <p>US Representatives:</p>
           <ul>
-            {stateSenatorCandidates.map((val, idx) => {
+            {usRepCandidates.map((val, idx) => {
               const { CandidateName, Party, Issues } = val;
               return (
                 // eslint-disable-next-line react/no-array-index-key
@@ -101,12 +101,12 @@ function CandidateListing({ address }) {
           </ul>
         </div>
       )}
-      {usRepCandidates.length > 0 && (
+      {stateSenatorCandidates.length > 0 && (
         <div>
           <hr />
-          <p>US Representatives:</p>
+          <p>State Senators:</p>
           <ul>
-            {usRepCandidates.map((val, idx) => {
+            {stateSenatorCandidates.map((val, idx) => {
               const { CandidateName, Party, Issues } = val;
               return (
                 // eslint-disable-next-line react/no-array-index-key
