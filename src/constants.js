@@ -2,6 +2,9 @@
 export const CANDIDATE_DATA_URL =
   "https://civic-coup.github.io/data/candidates/index.json";
 
-// Keys :(
+// Google API Information
+export const GOOGLE_API_SCRIPT_URL = "https://apis.google.com/js/api.js";
+export const GOOGLE_CIVIC_INFO_URL =
+  "https://content.googleapis.com/discovery/v1/apis/civicinfo/v2/rest";
 export const GOOGLE_PLACES_API_KEY = "SECRET";
 export const GOOGLE_API_KEY = "SECRET";
