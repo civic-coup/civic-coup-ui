@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import "./App.css";
 import AddressForm from "../AddressForm";
+import CandidateListing from "../CandidateListing";
 
 function App() {
   const [address, setAddress] = useState("");
@@ -10,9 +11,9 @@ function App() {
     <div className="App">
       <header className="App-header">
         {address ? (
-          <p>{address}</p>
+          <CandidateListing address={address} />
         ) : (
-          <AddressForm onSubmit={(input) => setAddress(input)} />
+          <AddressForm onLocatePlace={(input) => setAddress(input)} />
         )}
       </header>
     </div>
