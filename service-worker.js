@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/civic-coup-ui/precache-manifest.8a9c638d1db9a8817129d7dc899c6893.js"
+  "/civic-coup-ui/precache-manifest.bb9a81cd6773139dbfb6a5baf1b26657.js"
 );
 
 self.addEventListener('message', (event) => {
