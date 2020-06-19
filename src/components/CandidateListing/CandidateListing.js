@@ -2,7 +2,12 @@ import React, { useState, useEffect } from "react";
 import Script from "react-load-script";
 
 import "./CandidateListing.css";
-import { CANDIDATE_DATA_URL, GOOGLE_API_KEY } from "../../constants";
+import {
+  CANDIDATE_DATA_URL,
+  GOOGLE_API_KEY,
+  GOOGLE_API_SCRIPT_URL,
+  GOOGLE_CIVIC_INFO_URL,
+} from "../../constants";
 
 const gapiOfficeToSearchOffice = {
   "NY State Senator": "state-senator",
@@ -29,9 +34,7 @@ function CandidateListing({ address }) {
   const onScriptLoad = async () => {
     await window.gapi.load("client", async () => {
       await window.gapi.client.setApiKey(GOOGLE_API_KEY);
-      await window.gapi.client.load(
-        "https://content.googleapis.com/discovery/v1/apis/civicinfo/v2/rest"
-      );
+      await window.gapi.client.load(GOOGLE_CIVIC_INFO_URL);
       setReady(true);
     });
   };
@@ -76,11 +79,7 @@ function CandidateListing({ address }) {
 
   return (
     <div>
-      <Script
-        url="https://apis.google.com/js/api.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        onLoad={onScriptLoad}
-      />
+      <Script url={GOOGLE_API_SCRIPT_URL} onLoad={onScriptLoad} />
       {address && (
         <div>
           <p>Your Address:</p>
@@ -93,7 +92,11 @@ function CandidateListing({ address }) {
           <p>State Senators:</p>
           <ul>
             {stateSenatorCandidates.map((val, idx) => {
-              return <li key={idx}>{val.name}</li>; // eslint-disable-line react/no-array-index-key
+              const { CandidateName, Party, Issues } = val;
+              return (
+                // eslint-disable-next-line react/no-array-index-key
+                <li key={idx}>{`${CandidateName} (${Party}) - ${Issues}`}</li>
+              );
             })}
           </ul>
         </div>
@@ -104,7 +107,11 @@ function CandidateListing({ address }) {
           <p>US Representatives:</p>
           <ul>
             {usRepCandidates.map((val, idx) => {
-              return <li key={idx}>{val.name}</li>; // eslint-disable-line react/no-array-index-key
+              const { CandidateName, Party, Issues } = val;
+              return (
+                // eslint-disable-next-line react/no-array-index-key
+                <li key={idx}>{`${CandidateName} (${Party}) - ${Issues}`}</li>
+              );
             })}
           </ul>
         </div>
@@ -115,7 +122,11 @@ function CandidateListing({ address }) {
           <p>State Assembly:</p>
           <ul>
             {assemblyCandidates.map((val, idx) => {
-              return <li key={idx}>{val.name}</li>; // eslint-disable-line react/no-array-index-key
+              const { CandidateName, Party, Issues } = val;
+              return (
+                // eslint-disable-next-line react/no-array-index-key
+                <li key={idx}>{`${CandidateName} (${Party}) - ${Issues}`}</li>
+              );
             })}
           </ul>
         </div>
