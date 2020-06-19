@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import "./App.css";
 import AddressForm from "../AddressForm";
+import CandidateListing from "../CandidateListing";
 
 const pictureOne = require("../../img/about.jpg");
 
@@ -77,12 +78,14 @@ function App() {
                 Find you district candidates!
               </h2>
             </header>
-            <div className="row text-center">
-              {address ? (
-                <p>{address}</p>
-              ) : (
-                <AddressForm onSubmit={(input) => setAddress(input)} />
-              )}
+            <div className="App">
+              <header className="App-header">
+                {address ? (
+                  <CandidateListing address={address} />
+                ) : (
+                  <AddressForm onLocatePlace={(input) => setAddress(input)} />
+                )}
+              </header>
             </div>
           </div>
         </div>
