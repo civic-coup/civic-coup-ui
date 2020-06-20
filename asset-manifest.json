@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/civic-coup-ui/static/css/main.315854b3.chunk.css",
-    "main.js": "/civic-coup-ui/static/js/main.18bc34cb.chunk.js",
-    "main.js.map": "/civic-coup-ui/static/js/main.18bc34cb.chunk.js.map",
+    "main.js": "/civic-coup-ui/static/js/main.32dcd5fb.chunk.js",
+    "main.js.map": "/civic-coup-ui/static/js/main.32dcd5fb.chunk.js.map",
     "runtime-main.js": "/civic-coup-ui/static/js/runtime-main.543da08a.js",
     "runtime-main.js.map": "/civic-coup-ui/static/js/runtime-main.543da08a.js.map",
     "static/js/2.ffff2330.chunk.js": "/civic-coup-ui/static/js/2.ffff2330.chunk.js",
     "static/js/2.ffff2330.chunk.js.map": "/civic-coup-ui/static/js/2.ffff2330.chunk.js.map",
     "index.html": "/civic-coup-ui/index.html",
-    "precache-manifest.cd3a0e88adf116570ea9db5afa71c72d.js": "/civic-coup-ui/precache-manifest.cd3a0e88adf116570ea9db5afa71c72d.js",
+    "precache-manifest.821f517dd7d1ce985bbdf8f22b864f4a.js": "/civic-coup-ui/precache-manifest.821f517dd7d1ce985bbdf8f22b864f4a.js",
     "service-worker.js": "/civic-coup-ui/service-worker.js",
     "static/css/main.315854b3.chunk.css.map": "/civic-coup-ui/static/css/main.315854b3.chunk.css.map",
     "static/js/2.ffff2330.chunk.js.LICENSE.txt": "/civic-coup-ui/static/js/2.ffff2330.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.543da08a.js",
     "static/js/2.ffff2330.chunk.js",
     "static/css/main.315854b3.chunk.css",
-    "static/js/main.18bc34cb.chunk.js"
+    "static/js/main.32dcd5fb.chunk.js"
   ]
 }
