@@ -82,7 +82,6 @@ function CandidateListing({ address }) {
       <Script url={GOOGLE_API_SCRIPT_URL} onLoad={onScriptLoad} />
       {address && (
         <div>
-          <p>Your Address:</p>
           <p>{address}</p>
         </div>
       )}
