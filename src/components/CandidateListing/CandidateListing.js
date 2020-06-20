@@ -85,7 +85,7 @@ function CandidateListing({ address }) {
           <p>{address}</p>
         </div>
       )}
-      {usRepCandidates.length > 0 && (
+      {usRepCandidates && usRepCandidates.length > 0 && (
         <div>
           <hr />
           <p>US Representatives:</p>
@@ -100,7 +100,7 @@ function CandidateListing({ address }) {
           </ul>
         </div>
       )}
-      {stateSenatorCandidates.length > 0 && (
+      {stateSenatorCandidates && stateSenatorCandidates.length > 0 && (
         <div>
           <hr />
           <p>State Senators:</p>
@@ -115,7 +115,7 @@ function CandidateListing({ address }) {
           </ul>
         </div>
       )}
-      {assemblyCandidates.length > 0 && (
+      {assemblyCandidates && assemblyCandidates.length > 0 && (
         <div>
           <hr />
           <p>State Assembly:</p>
