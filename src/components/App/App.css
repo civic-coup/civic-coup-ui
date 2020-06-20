@@ -1,38 +1,214 @@
-.App {
-    text-align: center;
-}
-
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
+    .App {
+        text-align: center;
+    }
+    
     .App-logo {
-        animation: App-logo-spin infinite 20s linear;
+        height: 40vmin;
+        pointer-events: none;
     }
-}
-
-.App-header {
-    background-color: #2e4249;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
-}
-
-.App-link {
-    color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
+    
+    @media (prefers-reduced-motion: no-preference) {
+        .App-logo {
+            animation: App-logo-spin infinite 20s linear;
+        }
     }
-    to {
-        transform: rotate(360deg);
+    
+    .App-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: calc(10px + 2vmin);
+        color: white;
     }
-}
+    
+    .App-link {
+        color: #61dafb;
+    }
+    
+    section {
+        position: relative;
+        padding: 6rem 0;
+    }
+    
+    .main-page {
+        position: relative;
+    }
+    
+    .top {
+        padding-bottom: 15%;
+    }
+    
+    .bg-cover {
+        background-size: cover !important;
+    }
+    
+    .bg-center {
+        background-position: center center !important;
+    }
+    
+    .hero {
+        background: url(../../img/main_pic_3.jpeg);
+        min-height: 100vh;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+    
+    .text-uppercase {
+        letter-spacing: 0.08em;
+        margin: 30px 0;
+    }
+    
+    .lead {
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+    
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .h1,
+    .h2,
+    .h3,
+    .h4,
+    .h5,
+    .h6 {
+        margin-bottom: 0.5rem;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+        line-height: 1.2;
+        color: inherit;
+    }
+    
+    h1,
+    .h1 {
+        font-size: 3rem;
+    }
+    
+    h2,
+    .h2 {
+        font-size: 2.3rem;
+    }
+    
+    h3,
+    .h3 {
+        font-size: 1.9rem;
+    }
+    
+    h4,
+    .h4 {
+        font-size: 1.5rem;
+    }
+    
+    h5,
+    .h5 {
+        font-size: 1.1rem;
+    }
+    
+    h6,
+    .h6 {
+        font-size: 1rem;
+    }
+    /*
+ * 3. TYPE
+ */
+    
+    body {
+        font-family: "cardo", sans-serif;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #212529;
+        background-color: #fff;
+    }
+    
+    a {
+        color: #4fbfa8;
+        text-decoration: none;
+    }
+    
+    a:hover,
+    a:focus {
+        color: #348e7b;
+        text-decoration: underline;
+    }
+    
+    .display-1 {
+        font-size: 6rem;
+        font-weight: 300;
+        line-height: 1.2;
+    }
+    
+    .display-2 {
+        font-size: 5.5rem;
+        font-weight: 300;
+        line-height: 1.2;
+    }
+    
+    .display-3 {
+        font-size: 4.5rem;
+        font-weight: 300;
+        line-height: 1.2;
+    }
+    
+    .display-4 {
+        font-size: 3.5rem;
+        font-weight: 300;
+        line-height: 1.2;
+    }
+    
+    hr {
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    
+    small,
+    .small {
+        font-size: 80%;
+        font-weight: 400;
+    }
+    
+    mark,
+    .mark {
+        padding: 0.2em;
+        background-color: #fcf8e3;
+    }
+    
+    .blockquote {
+        padding: 0.5rem 1rem;
+        margin-bottom: 2rem;
+        font-size: 1.25rem;
+        border-left: 5px solid #4fbfa8;
+    }
+    
+    .blockquote-footer {
+        color: #6c757d;
+    }
+    
+    .blockquote-footer::before {
+        content: "\2014 \00A0";
+    }
+    
+    .text-primary {
+        color: #4fbfa8 !important;
+    }
+    
+    a.text-primary:hover,
+    a.text-primary:focus {
+        color: #3aa18c !important;
+    }
+    
+    @keyframes App-logo-spin {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
