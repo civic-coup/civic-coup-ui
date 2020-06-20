@@ -15,12 +15,29 @@ const gapiOfficeToSearchOffice = {
   "U.S. Representative": "us-representative",
 };
 
+var stateSenatorCandidates
+var stateAssemblyMemberCandidates
+var usRepresentativeCandidates
+var csvData
+
+fetch("https://raw.githubusercontent.com/civic-coup/data/master/candidate_data.csv")
+  .then(function (response) {
+    response.text().then(function (responseText) {
+      csvData = Papa.parse(responseText, { header: true }).data
+    });
+  });
+
 function getDistrictNumber(divisionId) {
   return divisionId.split(":").slice(-1)[0];
 }
 
 function getSearchId(office, divisionId) {
   return `${gapiOfficeToSearchOffice[office]}-${getDistrictNumber(divisionId)}`;
+}
+
+function search(searchId) {
+  console.log("Inside search")
+  return csvData.filter(data => data.SearchId === searchId)
 }
 
 // eslint-disable-next-line react/prop-types
@@ -54,21 +71,36 @@ function CandidateListing({ address }) {
         .representativeInfoByAddress({ address })
         .then((response) => {
           const { result } = response;
-          result.offices.forEach((r) => {
-            const { name, divisionId } = r;
-            const searchId = getSearchId(name, divisionId);
-            const filtered = candidateInformation.filter(
-              (d) => d.SearchId === searchId
-            );
 
-            if (name === "NY State Senator") {
-              setStateSenatorCandidates(filtered);
-            } else if (name === "U.S. Representative") {
-              setUsRepCandidates(filtered);
-            } else if (name === "NY State Assemblymember") {
-              setAssemblyCandidates(filtered);
+          result.offices.forEach(function (r) {
+            // console.log(r)
+            var searchId
+            if (r.name == 'NY State Senator') {
+              searchId = getSearchId(r.name, r.divisionId)
+              console.log("State Senator District: " + searchId)
+              stateSenatorCandidates = search(searchId)
             }
-          });
+
+            if (r.name == 'U.S. Representative') {
+              searchId = getSearchId(r.name, r.divisionId)
+              console.log("US Represenative District: " + searchId)
+              usRepresentativeCandidates = search(searchId)
+            }
+
+            if (r.name == 'NY State Assemblymember') {
+              searchId = getSearchId(r.name, r.divisionId)
+              console.log("NY State Assemblymember: " + searchId)
+              stateAssemblyMemberCandidates = search(searchId)
+            }
+
+          })
+
+          console.log("State Senator Candidates: ")
+          console.log(stateSenatorCandidates)
+          console.log("U.S. Representative Candidates: ")
+          console.log(usRepresentativeCandidates)
+          console.log("State Assembly Member Candidates: ")
+          console.log(stateAssemblyMemberCandidates)
         });
     }
 
