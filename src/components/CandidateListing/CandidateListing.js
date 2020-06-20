@@ -15,15 +15,12 @@ const gapiOfficeToSearchOffice = {
   "U.S. Representative": "us-representative",
 };
 
-var stateSenatorCandidates
-var stateAssemblyMemberCandidates
-var usRepresentativeCandidates
-var csvData
+let csvData
 
 fetch("https://raw.githubusercontent.com/civic-coup/data/master/candidate_data.csv")
   .then(function (response) {
     response.text().then(function (responseText) {
-      csvData = Papa.parse(responseText, { header: true }).data
+      csvData = window.Papa.parse(responseText, { header: true }).data
     });
   });
 
@@ -71,10 +68,12 @@ function CandidateListing({ address }) {
         .representativeInfoByAddress({ address })
         .then((response) => {
           const { result } = response;
-
+          let stateSenatorCandidates = []
+          let stateAssemblyMemberCandidates = []
+          let usRepresentativeCandidates = []
           result.offices.forEach(function (r) {
             // console.log(r)
-            var searchId
+            let searchId
             if (r.name == 'NY State Senator') {
               searchId = getSearchId(r.name, r.divisionId)
               console.log("State Senator District: " + searchId)
