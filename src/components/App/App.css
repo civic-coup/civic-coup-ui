@@ -48,7 +48,7 @@
     }
     
     .hero {
-        background: url(../../img/main_pic_3.jpeg);
+        background: url(../../img/main_pic.jpeg);
         min-height: 100vh;
         display: -ms-flexbox;
         display: flex;
