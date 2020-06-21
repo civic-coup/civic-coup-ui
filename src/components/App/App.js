@@ -26,7 +26,7 @@ function App() {
           </div>
           <div className={classNames("text-center", "text-white")}>
             <p className={classNames("font-italic", "lead", "m3")}>
-              enter your address to see who is running in your district
+              Enter your address to see who is running in your district
             </p>
             <div className="App-header">
               {address ? (
