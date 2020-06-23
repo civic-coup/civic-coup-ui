@@ -39,10 +39,10 @@ function search(searchId) {
 
 // eslint-disable-next-line react/prop-types
 function CandidateListing({ address }) {
-  const [candidateInformation, setCandidateInformation] = useState([]);
-  const [stateSenatorCandidates, setStateSenatorCandidates] = useState([]);
-  const [usRepCandidates, setUsRepCandidates] = useState([]);
-  const [assemblyCandidates, setAssemblyCandidates] = useState([]);
+  let [candidateInformation, setCandidateInformation] = useState([]);
+  let [stateSenatorCandidates, setStateSenatorCandidates] = useState([]);
+  let [usRepCandidates, setUsRepCandidates] = useState([]);
+  let [assemblyCandidates, setAssemblyCandidates] = useState([]);
   const [ready, setReady] = useState(false);
 
   const onScriptLoad = async () => {
@@ -68,9 +68,9 @@ function CandidateListing({ address }) {
         .representativeInfoByAddress({ address })
         .then((response) => {
           const { result } = response;
-          let stateSenatorCandidates = []
-          let stateAssemblyMemberCandidates = []
-          let usRepresentativeCandidates = []
+          // let stateSenatorCandidates = []
+          // let stateAssemblyMemberCandidates = []
+          // let usRepresentativeCandidates = []
           result.offices.forEach(function (r) {
             // console.log(r)
             let searchId
@@ -83,13 +83,13 @@ function CandidateListing({ address }) {
             if (r.name == 'U.S. Representative') {
               searchId = getSearchId(r.name, r.divisionId)
               console.log("US Represenative District: " + searchId)
-              usRepresentativeCandidates = search(searchId)
+              usRepCandidates = search(searchId)
             }
 
             if (r.name == 'NY State Assemblymember') {
               searchId = getSearchId(r.name, r.divisionId)
               console.log("NY State Assemblymember: " + searchId)
-              stateAssemblyMemberCandidates = search(searchId)
+              assemblyCandidates = search(searchId)
             }
 
           })
@@ -97,9 +97,9 @@ function CandidateListing({ address }) {
           console.log("State Senator Candidates: ")
           console.log(stateSenatorCandidates)
           console.log("U.S. Representative Candidates: ")
-          console.log(usRepresentativeCandidates)
+          console.log(usRepCandidates)
           console.log("State Assembly Member Candidates: ")
-          console.log(stateAssemblyMemberCandidates)
+          console.log(assemblyCandidates)
         });
     }
 
